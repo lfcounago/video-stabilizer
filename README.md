@@ -5,7 +5,7 @@ En este proyecto se desarrolla un código para la estabilización de un video a 
 
 
 
-main()
+--Función main()--
 
 Comenzaremos por la función main(). Antes de empezar, lo primero que realizamos es comprobar el número de argumentos que recibe esta función [línea 36], y cargamos la imagen según sea este número.
 
@@ -19,7 +19,7 @@ Para terminar, una vez recorridos todos los frames del video y ejecutadas todas 
 
 
 
-calcularDesplazamiento()
+--Función calcularDesplazamiento()--
 
 Con esta función [línea 83], calcularemos el número de filas y columnas que se ha desplazado la imagen con respecto a la primera que habíamos guardado en el main() para comparar con el resto de frames que iremos obteniendo. Para ello, comprobamos el bloque central de ambas imágenes, sin embargo, el bloque del frame actual lo desplazamos hasta que la diferencia con el de la primera imagen sea 0 (usando la función compararBloques() en cada desplazamiento).
 
@@ -27,12 +27,12 @@ Cuando tengo calculado el desplazamiento del frame (guardado en las variables de
 
 
 
-compararBloques()
+--Función compararBloques()--
 
 Utilizamos esta función [línea 97] para analizar, respecto a un bloque dado, la tonalidad de otros, determinando la diferencia de tono que hay entre ambas, y así, poder encontrar el bloque que se corresponde a la posición central que se ha determinado con anterioridad.
 
 
 
-aplicarDesplazamiento()
+--Función aplicarDesplazamiento()--
 
 Con la funcion aplicarDesplazamiento() [línea 112]. Primero, creamos una imagen auxiliar donde aplicaremos el desplazamiento. A continuación, recorremos esta imagen y le vamos copiando lo que corresponda. Para esto, usamos la posición en la que estamos y el desplazamiento en esa imagen. Si se cumplen algunas de las condiciones (ver código), esa posición será de color negro, sino copio el trozo de la imagen que corresponde en esa posición.
